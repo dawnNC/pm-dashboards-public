@@ -14,52 +14,95 @@ body { font-family: -apple-system, system-ui, sans-serif; background: var(--bg);
     padding: 3rem 2rem; max-width: 700px; margin: 0 auto; }
 h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 p { color: #6c757d; margin-bottom: 1.5rem; }
-ul { list-style: none; }
-li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
 a { color: var(--accent); text-decoration: none; font-weight: 500; }
 a:hover { text-decoration: underline; }
 .back { margin-bottom: 1.5rem; display: inline-block; font-size: 0.9rem; }
+
+.month-group { margin-bottom: 0.5rem; }
+.month-header {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.month-header::before {
+    content: "\25B6";
+    font-size: 0.65rem;
+    transition: transform 0.2s;
+}
+details[open] .month-header::before {
+    transform: rotate(90deg);
+}
+.month-count {
+    color: #6c757d;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+.days-list {
+    list-style: none;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+}
+.days-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border);
+}
+.days-list li:last-child { border-bottom: none; }
 </style>
 </head>
 <body>
 <a href="../" class="back">&larr; Back to Dashboards</a>
 <h1>Intelligence Brief Archive</h1>
 <p>Past daily briefs</p>
-<ul>
-<li><a href="brief-2026-02-02.html">Monday, February 2, 2026</a></li>
-<li><a href="brief-2026-02-01.html">Sunday, February 1, 2026</a></li>
-<li><a href="brief-2026-01-31.html">Saturday, January 31, 2026</a></li>
-<li><a href="brief-2026-01-30.html">Friday, January 30, 2026</a></li>
-<li><a href="brief-2026-01-29.html">Thursday, January 29, 2026</a></li>
-<li><a href="brief-2026-01-28.html">Wednesday, January 28, 2026</a></li>
-<li><a href="brief-2026-01-27.html">Tuesday, January 27, 2026</a></li>
-<li><a href="brief-2026-01-26.html">Monday, January 26, 2026</a></li>
-<li><a href="brief-2026-01-25.html">Sunday, January 25, 2026</a></li>
-<li><a href="brief-2026-01-24.html">Saturday, January 24, 2026</a></li>
-<li><a href="brief-2026-01-23.html">Friday, January 23, 2026</a></li>
-<li><a href="brief-2026-01-22.html">Thursday, January 22, 2026</a></li>
-<li><a href="brief-2026-01-21.html">Wednesday, January 21, 2026</a></li>
-<li><a href="brief-2026-01-20.html">Tuesday, January 20, 2026</a></li>
-<li><a href="brief-2026-01-19.html">Monday, January 19, 2026</a></li>
-<li><a href="brief-2026-01-18.html">Sunday, January 18, 2026</a></li>
-<li><a href="brief-2026-01-17.html">Saturday, January 17, 2026</a></li>
-<li><a href="brief-2026-01-16.html">Friday, January 16, 2026</a></li>
-<li><a href="brief-2026-01-15.html">Thursday, January 15, 2026</a></li>
-<li><a href="brief-2026-01-14.html">Wednesday, January 14, 2026</a></li>
-<li><a href="brief-2026-01-13.html">Tuesday, January 13, 2026</a></li>
-<li><a href="brief-2026-01-12.html">Monday, January 12, 2026</a></li>
-<li><a href="brief-2026-01-11.html">Sunday, January 11, 2026</a></li>
-<li><a href="brief-2026-01-10.html">Saturday, January 10, 2026</a></li>
-<li><a href="brief-2026-01-09.html">Friday, January 9, 2026</a></li>
-<li><a href="brief-2026-01-08.html">Thursday, January 8, 2026</a></li>
-<li><a href="brief-2026-01-07.html">Wednesday, January 7, 2026</a></li>
-<li><a href="brief-2026-01-06.html">Tuesday, January 6, 2026</a></li>
-<li><a href="brief-2026-01-05.html">Monday, January 5, 2026</a></li>
-<li><a href="brief-2026-01-04.html">Sunday, January 4, 2026</a></li>
-<li><a href="brief-2026-01-03.html">Saturday, January 3, 2026</a></li>
-<li><a href="brief-2026-01-02.html">Friday, January 2, 2026</a></li>
-<li><a href="brief-2026-01-01.html">Thursday, January 1, 2026</a></li>
 
-</ul>
+        <details class="month-group" open>
+            <summary class="month-header">February 2026 <span class="month-count">(2)</span></summary>
+            <ul class="days-list">
+                <li><a href="brief-2026-02-02.html">Monday, February 2</a></li>
+<li><a href="brief-2026-02-01.html">Sunday, February 1</a></li>
+            </ul>
+        </details>
+        <details class="month-group">
+            <summary class="month-header">January 2026 <span class="month-count">(31)</span></summary>
+            <ul class="days-list">
+                <li><a href="brief-2026-01-31.html">Saturday, January 31</a></li>
+<li><a href="brief-2026-01-30.html">Friday, January 30</a></li>
+<li><a href="brief-2026-01-29.html">Thursday, January 29</a></li>
+<li><a href="brief-2026-01-28.html">Wednesday, January 28</a></li>
+<li><a href="brief-2026-01-27.html">Tuesday, January 27</a></li>
+<li><a href="brief-2026-01-26.html">Monday, January 26</a></li>
+<li><a href="brief-2026-01-25.html">Sunday, January 25</a></li>
+<li><a href="brief-2026-01-24.html">Saturday, January 24</a></li>
+<li><a href="brief-2026-01-23.html">Friday, January 23</a></li>
+<li><a href="brief-2026-01-22.html">Thursday, January 22</a></li>
+<li><a href="brief-2026-01-21.html">Wednesday, January 21</a></li>
+<li><a href="brief-2026-01-20.html">Tuesday, January 20</a></li>
+<li><a href="brief-2026-01-19.html">Monday, January 19</a></li>
+<li><a href="brief-2026-01-18.html">Sunday, January 18</a></li>
+<li><a href="brief-2026-01-17.html">Saturday, January 17</a></li>
+<li><a href="brief-2026-01-16.html">Friday, January 16</a></li>
+<li><a href="brief-2026-01-15.html">Thursday, January 15</a></li>
+<li><a href="brief-2026-01-14.html">Wednesday, January 14</a></li>
+<li><a href="brief-2026-01-13.html">Tuesday, January 13</a></li>
+<li><a href="brief-2026-01-12.html">Monday, January 12</a></li>
+<li><a href="brief-2026-01-11.html">Sunday, January 11</a></li>
+<li><a href="brief-2026-01-10.html">Saturday, January 10</a></li>
+<li><a href="brief-2026-01-09.html">Friday, January 9</a></li>
+<li><a href="brief-2026-01-08.html">Thursday, January 8</a></li>
+<li><a href="brief-2026-01-07.html">Wednesday, January 7</a></li>
+<li><a href="brief-2026-01-06.html">Tuesday, January 6</a></li>
+<li><a href="brief-2026-01-05.html">Monday, January 5</a></li>
+<li><a href="brief-2026-01-04.html">Sunday, January 4</a></li>
+<li><a href="brief-2026-01-03.html">Saturday, January 3</a></li>
+<li><a href="brief-2026-01-02.html">Friday, January 2</a></li>
+<li><a href="brief-2026-01-01.html">Thursday, January 1</a></li>
+            </ul>
+        </details>
 </body>
 </html>
